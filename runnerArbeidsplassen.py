@@ -6,11 +6,10 @@ import pandas as pd
 from .env import API_KEY
 from .env import SHEET_ID
 
-
-SHEET_RANGE = 'Sheet1!A1:D1000'  # Adjust range as needed
+SHEET_RANGE = 'Sheet1!A1:D1000'  
 
 # Base URL for job listings
-base_url = "https://www.finn.no/job/fulltime/search.html?industry=41&industry=8&industry=65&industry=32&industry=34&industry=66&location=0.20001&occupation=0.7&occupation=0.62&occupation=0.61&occupation=0.60&occupation=0.25&occupation=0.23&occupation=0.22&occupation=0.2"
+base_url = "https://arbeidsplassen.nav.no/stillinger?size=100&v=3"
 
 # List of locations to filter
 locations_of_interest = [
@@ -91,7 +90,7 @@ def extract_jobs(data):
 
 def save_to_csv(data):
     df = pd.DataFrame(data, columns=['Title', 'Employer', 'Link', 'Location'])
-    df.to_csv('FilteredJobs.csv', index=False)
+    df.to_csv('FinnArbeid.csv', index=False)
     print("Data saved to FilteredJobs.csv")
 
 def update_google_sheet(api_key, data):
