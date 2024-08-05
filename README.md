@@ -12,3 +12,10 @@ and you will also need some other packages
 this can have a small change too have google sheet api support please read the documentation
 <br>
 https://cloud.google.com/docs/authentication?_gl=1*lyvsbd*_ga*NDk3NDI0NTYwLjE3MjI2MDEzNjU.*_ga_WH2QY8WWF5*MTcyMjg0MTQzMS4zLjEuMTcyMjg0MTQzMS42MC4wLjA.
+<br> <br> <br>
+as for extentions i use
+<br>
+- python debugger <br>
+- python
+<br>
+both from microsoft
