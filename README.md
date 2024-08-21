@@ -19,3 +19,5 @@ as for extentions i use
 - python
 <br>
 both from microsoft
+
+you use the locations
