@@ -1,6 +1,6 @@
 import os
 import requests
-from bs4 import BeautifulSoup
+from bs4 import beautifulsoup
 import json
 import pandas as pd
 from .env import API_KEY
@@ -20,7 +20,7 @@ locations_of_interest = [
 ]
 
 # Keywords to filter job titles
-keywords = [
+KEYWORDS = [
     "it", "IT", "Utvikler", "FullStack", "Backend", "Frontend", "PC", "Telefon", "Phone", "pc", "developer", "Developer",
     "Software", "Firmware", "Reperasjon", "Ikt", "IKT", "Dev", "Devops", "security", "Databaser", "Spill", "Game", "Tech",
     "teknologi", "Teknologi", "Artificial Intelligence", "AI", "Machine Learning", "ML", "Data Science", "Cloud Computing",
@@ -47,7 +47,7 @@ def fetch_jobs(url):
         print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
         return None
 
-    soup = BeautifulSoup(response.content, 'html.parser')
+    soup = beautifulsoup(response.content, 'html.parser')
     script_tag = soup.find('script', id='__NEXT_DATA__')
 
     if not script_tag:
