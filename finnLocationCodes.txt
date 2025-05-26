@@ -1,0 +1,18 @@
+1.20001.22042 = Agder
+1.20001.20003 = Akershus
+1.20001.20007 = Buskerud
+1.20001.20020 = Finnmark
+1.20001.22034 = Innlandet
+1.20001.20015 = Møre og Romsdal
+1.20001.20018 = Nordland
+1.20001.20061 = Oslo
+1.20001.20012 = Rogaland
+1.20001.20506 = Svalbard
+1.20001.20009 = Telemark
+1.20001.20019 = Troms
+1.20001.20016 = Trøndelag
+1.20001.20008 = Vestfold
+1.20001.22046 = Vestland
+1.20001.20002 = Østfold
+
+"bergen" = "2.20001.22046.20220"

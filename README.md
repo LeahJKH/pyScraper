@@ -1,23 +1,17 @@
 this scrapes using python you will need python 3.12 which you can download on marketplace on any windows machine
-then you will have too download pip
+then you will have too download pip make sure you are at the newest pip version
 - pip install pip
+im using python 3.13
   <br>
   
 and you will also need some other packages
 - pip install pandas
 - pip install requests
 - pip install python.dotenv
-- pip install beautifulsoup
+- pip install beautifulsoup4
 <br>
-this can have a small change too have google sheet api support please read the documentation
-<br>
-https://cloud.google.com/docs/authentication?_gl=1*lyvsbd*_ga*NDk3NDI0NTYwLjE3MjI2MDEzNjU.*_ga_WH2QY8WWF5*MTcyMjg0MTQzMS4zLjEuMTcyMjg0MTQzMS42MC4wLjA.
-<br> <br> <br>
-as for extentions i use
-<br>
-- python debugger <br>
-- python
-<br>
-both from microsoft
+then just cd into sites and run 
+- python3 (sitename).py
 
-you use the locations
+
+
