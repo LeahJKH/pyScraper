@@ -1,7 +1,7 @@
-this scrapes using python you will need python 3.12 which you can download on marketplace on any windows machine
+this scrapes using python you will need python 3.13 which you can download on marketplace on any windows machine
 then you will have too download pip make sure you are at the newest pip version
 - pip install pip
-im using python 3.13
+
   <br>
   
 and you will also need some other packages
