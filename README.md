@@ -10,8 +10,14 @@ and you will also need some other packages
 - pip install python.dotenv
 - pip install beautifulsoup4
 <br>
-then just cd into sites and run 
+then just cd into manual and run 
 - python3 (sitename).py
 
+<br>
+for now im creating one you can run without writing commands <br>
 
-
+if you want too run the frontend for easier done <br>
+run: <br>
+- cd site
+- python3 api.py
+then run a live server <br>
