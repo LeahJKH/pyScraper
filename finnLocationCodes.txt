@@ -7,6 +7,7 @@
 1.20001.20020 = Finnmark
 1.20001.22034 = Innlandet
 1.20001.20015 = Møre og Romsdal
+    2.20001.20015.20282 = ålesund
 1.20001.20018 = Nordland
 1.20001.20061 = Oslo
 1.20001.20012 = Rogaland

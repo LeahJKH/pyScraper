@@ -23,7 +23,8 @@ location_codes = {
     "østfold": "1.20001.20002",
     "norge": "0.20001",
     "utlandet": "0.20534",
-    "porsgrunn": "2.20001.20009.20146"
+    "porsgrunn": "2.20001.20009.20146",
+    "ålesund": "2.20001.20015.20282"
     }
 
 def make_safe_filename(text):
