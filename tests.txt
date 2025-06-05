@@ -1,0 +1,70 @@
+languages = (
+    "HTML", "CSS", "JavaScript", "TypeScript", "Python", "PHP", "Ruby", 
+    "Java", "Kotlin", "Go", "Rust", "C#", "Scala", "Elixir", "Swift", 
+    "Dart", "Clojure", "ClojureScript", "ReScript", "Elm", "WebAssembly", 
+    "SQL", "NoSQL", "JSON", "GraphQL", "Markdown", "Bash", "Shell", 
+    "Perl", "Haskell", "F#", "Crystal", "Nim", "Lua", "R", "C", "C++",
+    "AssemblyScript", "VB.NET", "Objective-C", "OCaml", "ReasonML", 
+    "Zig", "Janet", "V", "Erlang", "NimScript", "Tcl", "Hack", "LiveScript", 
+    "Pony", "Ada", "Fortran", "Ballerina", "Red", "Fantom", "Haxe", "PureScript", 
+    "Bosque"
+)
+
+
+
+frameworks = (
+    "React", "Vue", "Next.js", "Nuxt.js", "Svelte", "Astro", 
+    "Express", "NestJS", "Django", "Flask"
+)
+
+cloudServices = (
+    "Azure", "AWS", "Google Cloud", 
+    "Firebase", "Heroku", "Vercel", "Netlify", "Render"
+)
+
+skills_general = (
+    "Frontend", "Backend", "FullStack", "Front-End", "Back-End", "Full-Stack",
+    "UI", "UX", "User Interface", "User Experience", 
+    "Brukergrensesnitt", "Brukeropplevelse",
+    "Web Development", "Nettutvikling",
+    "Mobilutvikling", "Mobile Development",
+    "API-er", "APIs", "GraphQL", "REST",
+    "SQL", "NoSQL",
+    "Databaseadministrasjon", "Database Administration",
+    "Programmering", "Kode", "Skript",
+    "Programvareutvikling", "Software Engineering",
+    "Responsive Design", "Accessibility", "WCAG",
+    "Performance Optimization", "Browser Compatibility",
+    "Progressive Web Apps", "PWAs",
+    "CMS", "Headless CMS", "Contentful", "Sanity", "Strapi"
+)
+
+skills_process = (
+    "Version Control", "Git", "Versjonskontroll",
+    "Continuous Integration", "CI/CD", 
+    "DevOps",
+    "Smidig", "Agile", "Scrum", "Kanban",
+    "Testing", "Unit Testing", "E2E Testing", "QA", 
+    "Debugging", "Feilsøking", 
+    "Optimization", "Performance Optimization",
+    "Software Design", "Programvaredesign",
+    "Linting", "ESLint", "Prettier",
+    "Build Tools", "Webpack", "Vite",
+    "Monorepo", "Nx", "Turborepo",
+    "Package Managers", "NPM", "Yarn", "PNPM",
+    "Containerization", "Docker",
+    "Playwright", "Cypress", "Jest"
+)
+
+skills_roles = (
+    "Tech Lead", "Teknisk Leder",
+    "Software Architect", "Programvarearkitekt",
+    "Solution Architect", "Produktutvikler",
+    "Technical Writing", "Teknisk Skriving",
+    "Technical Project Manager",
+    "Innovation", "Innovasjon",
+    "Startup", "Oppstart",
+    "Teknologitrender", "Tech Trends"
+)
+
+basicFilter = "frontend", "fullstack", "backend"

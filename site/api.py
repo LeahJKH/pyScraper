@@ -1,12 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from finn import fetch_finn_jobs 
+import asyncio
+from finn import fetch_finn_jobs_async  # use the async version directly
 
-# it uses flask
 app = Flask(__name__)
 CORS(app)
 
-#just its home route
 @app.route("/")
 def home():
     return "Flask is working!"
@@ -17,14 +16,12 @@ def api_jobs():
     query = data.get("query")
     locations = data.get("locations")
 
-    #standard error msg
     if not query or not locations:
         return jsonify({"error": "Missing query or locations"}), 400
 
-    #get the function
-    result = fetch_finn_jobs(query, locations)
+    # Await the async job fetcher
+    result = asyncio.run(fetch_finn_jobs_async(query, locations))
 
-    #make sure it can be read by js
     return jsonify(result)
 
 if __name__ == "__main__":
