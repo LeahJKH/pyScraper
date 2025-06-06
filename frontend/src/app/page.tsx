@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
+import Image from 'next/image';
 
 type Job = {
   company_info: string[];
   link: string;
   title: string;
+  image?: string;
 };
 
 export default function Home() {
@@ -14,8 +16,10 @@ export default function Home() {
   const [location, setLocation] = useState('');
   const [query, setQuery] = useState('');
   const [jobs, setJobs] = useState<Job[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchJobs = async (query: string, locations: string[]) => {
+    setLoading(true);
     try {
       const response = await fetch('http://localhost:5000/api/jobs', {
         method: 'POST',
@@ -28,15 +32,25 @@ export default function Home() {
       }
 
       const data = await response.json();
-      console.log(data.jobs);
-      setJobs(data.jobs);
+
+      if (data.error) {
+        console.error('Backend error:', data.error);
+        alert(data.error);
+        setJobs([]);
+      } else {
+        setJobs(data.jobs || []);
+      }
     } catch (error) {
       console.error('Failed to fetch jobs:', error);
+      alert('Something went wrong while fetching jobs.');
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleSearch = () => {
     if (location.trim() && query.trim()) {
+      setJobs([]); // Clear old jobs while loading
       fetchJobs(query.trim(), [location.trim()]);
     } else {
       alert('Please fill in both fields before searching.');
@@ -45,37 +59,48 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <button onClick={() => setShowForm(true)}>finn.no</button>
+      <button onClick={() => setShowForm(true)} className={styles.sitebtn}>finn.no</button>
 
       {showForm && (
-        <section>
-          <input
+        <section className={styles.searchCont}>
+          <input className={styles.inputFields}
             type="text"
             placeholder="Enter location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
-          <input
+          <input className={styles.inputFields}
             type="text"
             placeholder="What are you looking for?"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <button onClick={handleSearch}>Search</button>
+          <button onClick={handleSearch} disabled={!location.trim() || !query.trim() || loading} className={styles.btnloader}>
+            {loading ? 'Loading...' : 'Search'}
+          </button>
         </section>
       )}
 
-      <section>
-        {jobs.map((job, index) => (
-          <div key={index}>
-            <h2>{job.company_info[0]}, {job.company_info[1]}</h2>
-            <a href={job.link} target="_blank" rel="noopener noreferrer">
-              link til annonse
-            </a>
-            <p>{job.title}</p>
-          </div>
-        ))}
-      </section>
+    <section className={styles.jobCont}>
+      {jobs.map((job, index) => (
+        <div key={index} className={styles.jobCard}>
+          {job.image && (
+            <Image
+              src={job.image}
+              alt="Company logo"
+              width={150}
+              height={80}
+              style={{ objectFit: 'contain' }}
+            />
+          )}
+          <h2>{job.company_info.length ? job.company_info.join(', ') : 'Unknown Company'}</h2>
+          <a href={job.link} target="_blank" rel="noopener noreferrer">
+            Link to ad
+          </a>
+          <p>{job.title}</p>
+        </div>
+      ))}
+    </section>
     </main>
   );
 }
