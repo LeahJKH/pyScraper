@@ -7,17 +7,7 @@ then you will have too download pip make sure you are at the newest pip version
 and you will also need some other packages
 - pip install pandas
 - pip install requests
-- pip install python.dotenv
 - pip install beautifulsoup4
+- pip install httpx
 <br>
-then just cd into manual and run 
-- python3 (sitename).py
-
-<br>
-for now im creating one you can run without writing commands <br>
-
-if you want too run the frontend for easier done <br>
-run: <br>
-- cd site
-- python3 api.py
-then run a live server <br>
+now u just have too run python3 start.py and ur good too go :3
