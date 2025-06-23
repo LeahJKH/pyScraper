@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import asyncio
-from finn import get_jobs  # renamed for simplicity
+from finn import get_jobs  
 
 app = Flask(__name__)
 CORS(app)
@@ -31,3 +31,17 @@ def api_jobs():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from database.connect import check_status
+
+status = check_status()
+
+if status == 1:
+    print("We're good to go!")
+else:
+    print("Something went wrong with the DB connection.")
